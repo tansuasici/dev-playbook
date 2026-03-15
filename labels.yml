@@ -1,0 +1,98 @@
+# Standard GitHub Label Set
+# Apply to every repo for consistency.
+#
+# Usage with gh CLI:
+#   gh label create "<name>" --color "<color>" --description "<description>" --repo <org>/<repo>
+#
+# Or use a tool like github-label-sync:
+#   npx github-label-sync --labels labels.yml <org>/<repo>
+
+# === Type Labels ===
+- name: bug
+  color: "d73a4a"
+  description: "Something isn't working"
+
+- name: enhancement
+  color: "a2eeef"
+  description: "New feature or request"
+
+- name: documentation
+  color: "0075ca"
+  description: "Documentation improvements"
+
+- name: refactor
+  color: "D4C5F9"
+  description: "Code restructuring without behavior change"
+
+- name: performance
+  color: "F9D0C4"
+  description: "Performance improvement"
+
+- name: testing
+  color: "BFD4F2"
+  description: "Test additions or improvements"
+
+- name: chore
+  color: "FEF2C0"
+  description: "Build, CI, dependencies, tooling"
+
+# === Priority Labels ===
+- name: P0-critical
+  color: "B60205"
+  description: "Critical — drop everything"
+
+- name: P1-high
+  color: "D93F0B"
+  description: "High priority — next working session"
+
+- name: P2-medium
+  color: "FBCA04"
+  description: "Medium priority — this sprint"
+
+- name: P3-low
+  color: "0E8A16"
+  description: "Low priority — when time allows"
+
+# === Status Labels (optional, for repos without project boards) ===
+- name: blocked
+  color: "B60205"
+  description: "Blocked by external dependency or decision"
+
+- name: needs-info
+  color: "D876E3"
+  description: "Needs more information before work can start"
+
+- name: wontfix
+  color: "ffffff"
+  description: "This will not be worked on"
+
+- name: duplicate
+  color: "cfd3d7"
+  description: "Duplicate of another issue"
+
+# === Area Labels (customize per project) ===
+# Uncomment and adjust for your project:
+#
+# - name: "area:auth"
+#   color: "1D76DB"
+#   description: "Authentication & authorization"
+#
+# - name: "area:api"
+#   color: "1D76DB"
+#   description: "API endpoints and controllers"
+#
+# - name: "area:frontend"
+#   color: "1D76DB"
+#   description: "Frontend/UI components"
+#
+# - name: "area:database"
+#   color: "1D76DB"
+#   description: "Database, migrations, queries"
+#
+# - name: "area:infra"
+#   color: "1D76DB"
+#   description: "Infrastructure, CI/CD, deployment"
+#
+# - name: "area:analytics"
+#   color: "1D76DB"
+#   description: "Analytics and reporting"
