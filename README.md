@@ -1,8 +1,21 @@
 # Dev Playbook
 
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Markdown Lint](https://github.com/tansuasici/dev-playbook/actions/workflows/lint.yml/badge.svg)](https://github.com/tansuasici/dev-playbook/actions/workflows/lint.yml)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](VERSION)
+
 Personal software development playbook. Defines how I build software — from branching strategy to code conventions.
 
 **Purpose**: Every new project reads this repo first and follows these standards. No reinventing the wheel.
+
+## Table of Contents
+
+- [How to Use](#how-to-use)
+- [Structure](#structure)
+- [Quick Reference](#quick-reference)
+- [Principles](#principles)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## How to Use
 
@@ -48,10 +61,17 @@ dev-playbook/
 │   ├── naming.md                Naming conventions (all languages)
 │   ├── api-design.md            REST API design standards
 │   ├── api-error-format.md      Standard error response format (RFC 7807)
+│   ├── error-handling.md        Exception handling patterns
 │   ├── testing.md               Testing philosophy and practices
 │   ├── logging.md               Logging levels, structured logging
+│   ├── observability.md         Metrics, tracing, alerting, health checks
+│   ├── performance.md           Response budgets, caching, N+1 prevention
 │   ├── docker.md                Dockerfile and Compose best practices
-│   └── git-hooks.md             Pre-commit hooks setup
+│   ├── git-hooks.md             Pre-commit hooks setup
+│   ├── environment-management.md  Environment config, feature flags, secrets
+│   ├── documentation.md         README template, API docs, inline comments
+│   ├── accessibility.md         WCAG 2.1 AA, keyboard nav, screen readers
+│   └── i18n.md                  Internationalization and localization
 ├── architecture/            ← How systems are designed
 │   ├── decisions.md             Architecture Decision Records (ADR)
 │   ├── multi-tenancy.md         Multi-tenancy with RLS
@@ -68,7 +88,16 @@ dev-playbook/
 │   ├── release.md               Release process
 │   ├── security-audit.md        Periodic security audit
 │   └── onboarding.md            New developer onboarding
-└── labels.yml               ← Standard GitHub label set
+├── .github/                 ← GitHub integration
+│   ├── ISSUE_TEMPLATE/          Native issue templates (bug, feature)
+│   ├── PULL_REQUEST_TEMPLATE.md Native PR template
+│   └── workflows/lint.yml       Markdown lint + broken link check
+├── labels.yml               ← Standard GitHub label set
+├── CONTRIBUTING.md          ← How to contribute
+├── CODE_OF_CONDUCT.md       ← Community standards
+├── CHANGELOG.md             ← Version history
+├── VERSION                  ← Current version (semver)
+└── LICENSE                  ← MIT License
 ```
 
 ## Quick Reference
@@ -83,22 +112,29 @@ dev-playbook/
 | Open a PR | [process/pull-requests.md](process/pull-requests.md) |
 | Review code | [process/code-review.md](process/code-review.md) |
 | Set up CI/CD | [process/ci-cd.md](process/ci-cd.md) |
+| Handle a production incident | [process/incident-response.md](process/incident-response.md) |
+| Manage dependencies | [process/dependency-management.md](process/dependency-management.md) |
 | Design a REST API | [conventions/api-design.md](conventions/api-design.md) |
 | Handle API errors | [conventions/api-error-format.md](conventions/api-error-format.md) |
+| Handle exceptions | [conventions/error-handling.md](conventions/error-handling.md) |
 | Write .NET code | [conventions/dotnet.md](conventions/dotnet.md) |
 | Write Next.js code | [conventions/nextjs.md](conventions/nextjs.md) |
 | Write Python code | [conventions/python.md](conventions/python.md) |
 | Write tests | [conventions/testing.md](conventions/testing.md) |
 | Set up logging | [conventions/logging.md](conventions/logging.md) |
+| Set up monitoring | [conventions/observability.md](conventions/observability.md) |
+| Optimize performance | [conventions/performance.md](conventions/performance.md) |
 | Write a Dockerfile | [conventions/docker.md](conventions/docker.md) |
 | Set up git hooks | [conventions/git-hooks.md](conventions/git-hooks.md) |
+| Manage environments | [conventions/environment-management.md](conventions/environment-management.md) |
+| Write documentation | [conventions/documentation.md](conventions/documentation.md) |
+| Make it accessible | [conventions/accessibility.md](conventions/accessibility.md) |
+| Add i18n support | [conventions/i18n.md](conventions/i18n.md) |
 | Design a database | [architecture/database.md](architecture/database.md) |
 | Design a multi-tenant system | [architecture/multi-tenancy.md](architecture/multi-tenancy.md) |
 | Review before merge | [checklists/pre-merge.md](checklists/pre-merge.md) |
 | Prepare a release | [checklists/release.md](checklists/release.md) |
 | Run a security audit | [checklists/security-audit.md](checklists/security-audit.md) |
-| Handle a production incident | [process/incident-response.md](process/incident-response.md) |
-| Manage dependencies | [process/dependency-management.md](process/dependency-management.md) |
 
 ## Principles
 
@@ -108,3 +144,11 @@ dev-playbook/
 4. **CI must pass before merge** — No exceptions. Tests are not optional.
 5. **Keep commits atomic** — One concern per commit. Easy to bisect, easy to revert.
 6. **Simplicity over cleverness** — Make it work, make it right, then make it fast.
+
+## Contributing
+
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

@@ -1,0 +1,50 @@
+name: Bug Report
+description: Report incorrect information, broken links, or errors in guides
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting an issue! Please fill out the details below.
+
+  - type: input
+    id: guide
+    attributes:
+      label: Which guide/file?
+      description: Path to the affected file (e.g., conventions/api-design.md)
+      placeholder: "conventions/example.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: Describe the issue clearly
+      placeholder: "The code example in the 'Structured Logging' section has a syntax error..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix
+      description: If you have a suggestion for how to fix this, share it here
+      placeholder: "The correct syntax should be..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Issue type
+      options:
+        - Incorrect information
+        - Outdated content
+        - Broken link
+        - Code example error
+        - Typo / grammar
+        - Other
+    validations:
+      required: true
