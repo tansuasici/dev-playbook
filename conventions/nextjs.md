@@ -4,7 +4,7 @@
 
 **App Router only** — no `pages/` directory.
 
-```
+```text
 src/
 ├── app/
 │   ├── [locale]/

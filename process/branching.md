@@ -22,11 +22,12 @@
 
 ## Naming Convention
 
-```
+```text
 <type>/<short-descriptive-slug>
 ```
 
 **Examples**:
+
 - `feat/user-authentication`
 - `fix/login-redirect-loop`
 - `hotfix/payment-null-reference`
@@ -35,6 +36,7 @@
 - `refactor/extract-email-service`
 
 **Rules**:
+
 - Lowercase only
 - Hyphens for word separation (no underscores, no spaces)
 - No issue numbers in branch names (the PR links to the issue)
@@ -42,7 +44,7 @@
 
 ## Workflow
 
-```
+```text
 1. Pick an issue from the board
 2. Move issue to "In Progress"
 3. Pull latest main:     git checkout main && git pull
@@ -62,6 +64,7 @@
 ## Develop Branch?
 
 Not needed for small-to-medium projects with a solo developer or small team. Main-based flow with feature branches is simpler and sufficient. Consider a `develop` branch only when:
+
 - Multiple people work on unrelated features simultaneously
 - You need a staging environment that tracks a separate branch
 - Release cycles require a stabilization period

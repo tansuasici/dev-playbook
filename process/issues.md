@@ -7,16 +7,19 @@
 ## Issue Types
 
 ### Feature Request
+
 - Label: `enhancement`
 - Template: [templates/issue-feature.md](../templates/issue-feature.md)
 - Must include: context, requirements checklist, acceptance criteria
 
 ### Bug Report
+
 - Label: `bug`
 - Template: [templates/issue-bug.md](../templates/issue-bug.md)
 - Must include: steps to reproduce, expected vs actual behavior, environment
 
 ### Documentation
+
 - Label: `documentation`
 - For docs-only changes
 
@@ -45,14 +48,14 @@ Every issue MUST have:
 
 Add area labels to categorize issues by module:
 
-```
+```text
 area:auth, area:course, area:analytics, area:ragchat,
 area:admin, area:student, area:instructor, area:infra, area:ci
 ```
 
 ## Writing Good Issue Titles
 
-```
+```text
 # Bad
 Fix bug
 Update code
@@ -68,7 +71,7 @@ docs: Add deployment guide for Kubernetes setup
 
 ## Issue Lifecycle
 
-```
+```text
 1. Create issue with proper labels and description
 2. Add to project board (auto or manual) → lands in "To Do"
 3. When starting work → move to "In Progress", assign yourself
@@ -103,6 +106,7 @@ This creates a searchable history of what was done and why.
 ## Cross-Repo Issues
 
 When work spans multiple repositories:
+
 - Create the issue in the **primary** repo (where most code changes happen)
 - Reference other repos in the body: "Also requires changes in `WebApp` repo"
 - Link related issues/PRs from other repos in comments

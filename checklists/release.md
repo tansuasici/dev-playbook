@@ -14,7 +14,7 @@ Run through this before tagging a release.
 
 Use [Semantic Versioning](https://semver.org/):
 
-```
+```text
 v<MAJOR>.<MINOR>.<PATCH>
 
 MAJOR — Breaking changes (incompatible API changes)

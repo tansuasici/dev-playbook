@@ -11,7 +11,7 @@
 
 ## Project Structure
 
-```
+```text
 project/
 ├── src/
 │   └── project_name/
@@ -58,6 +58,7 @@ def process_document(
 ```
 
 Use modern syntax:
+
 - `list[str]` not `List[str]`
 - `dict[str, int]` not `Dict[str, int]`
 - `str | None` not `Optional[str]`

@@ -47,6 +47,7 @@ logger.info(f"Course created {course_id} by {user_id}")
 ## What to Log
 
 ### Always Log
+
 - **Authentication events**: login success/failure, token refresh, logout
 - **Authorization failures**: forbidden access attempts
 - **Business events**: resource created/updated/deleted, state transitions
@@ -55,6 +56,7 @@ logger.info(f"Course created {course_id} by {user_id}")
 - **Application startup/shutdown**: config loaded, services registered, graceful shutdown
 
 ### Never Log
+
 - Passwords or password hashes
 - Access tokens, refresh tokens, API keys
 - Credit card numbers or financial details
@@ -63,6 +65,7 @@ logger.info(f"Course created {course_id} by {user_id}")
 - Personal data beyond what's needed (email OK for auth events, not for every log)
 
 ### Log with Caution
+
 - Email addresses — OK in auth context, mask elsewhere
 - User IDs — OK, they're not PII by themselves
 - IP addresses — may be PII under GDPR, log only for security events

@@ -6,7 +6,7 @@
 
 ## Test Pyramid
 
-```
+```text
         /  E2E  \          ← Few: critical user flows only
        /  Integr. \        ← Some: API endpoints, DB queries, external services
       /    Unit     \      ← Many: business logic, pure functions, handlers
@@ -21,6 +21,7 @@
 ## What to Test
 
 ### Always Test
+
 - Business logic and domain rules
 - Validation logic (valid and invalid inputs)
 - Edge cases (null, empty, boundary values, max limits)
@@ -29,6 +30,7 @@
 - Data transformations (mapping, serialization)
 
 ### Don't Bother Testing
+
 - Framework boilerplate (DI registration, middleware wiring)
 - Simple CRUD with no business logic
 - Third-party library internals
@@ -115,6 +117,7 @@ Keep each section short. If Arrange is 20 lines, extract a helper or use a build
 ## Flaky Tests
 
 Flaky tests (pass sometimes, fail sometimes) are worse than no tests:
+
 - **Fix immediately** or delete — don't leave them failing intermittently
 - Common causes: timing issues, shared state, network dependencies, date/time
 - Never use `continue-on-error` or `|| true` as a "fix" for flaky tests

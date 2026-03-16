@@ -4,7 +4,7 @@ Copy this to the root of a new project and customize.
 
 ---
 
-```markdown
+````markdown
 # <Project Name> — CLAUDE.md
 
 > <One-line description of the project>
@@ -103,4 +103,4 @@ Follow `conventions/` in the dev-playbook. Project-specific overrides:
 ## Key Decisions
 
 <!-- Link to ADRs or document project-specific architectural decisions here -->
-```
+````

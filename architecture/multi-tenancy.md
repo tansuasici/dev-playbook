@@ -38,11 +38,12 @@ public abstract class BaseEntity
 
 Resolve tenant from the request before any data access:
 
-```
+```text
 Request → TenantMiddleware → Resolve TenantId → Set in context → Continue
 ```
 
 Resolution strategies (pick one or combine):
+
 - **Subdomain**: `acme.app.com` → TenantId for Acme
 - **Header**: `X-Tenant-Id: <guid>`
 - **JWT claim**: `tenant_id` in the access token
@@ -87,6 +88,7 @@ This is your safety net — even if a developer forgets to filter, the global fi
 ## Testing Multi-Tenancy
 
 Critical tests to write:
+
 1. **Tenant A cannot see Tenant B's data** — Create data for two tenants, query as each, verify isolation
 2. **Missing TenantId fails** — Requests without tenant context should be rejected (401/403)
 3. **Write operations validate tenant** — Updating a resource from another tenant should fail

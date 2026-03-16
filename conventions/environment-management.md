@@ -22,7 +22,7 @@
 
 Use `.env` files for local development, environment variables or secrets managers for deployed environments.
 
-```
+```text
 .env                  → Local defaults (git-ignored)
 .env.example          → Template with placeholder values (committed)
 .env.test             → Test-specific overrides (committed, no secrets)
@@ -153,7 +153,7 @@ if (await _featureManager.IsEnabledAsync("NewDashboard"))
 
 ### Flag Lifecycle
 
-```
+```text
 Created → Testing → Rollout (10% → 50% → 100%) → Cleanup (remove flag + old code)
 ```
 

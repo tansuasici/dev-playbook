@@ -6,7 +6,7 @@ Every project has a GitHub Projects board with a standard Kanban layout.
 
 ## Columns
 
-```
+```text
 To Do → In Progress → Testing → Done
 ```
 
@@ -27,7 +27,7 @@ To Do → In Progress → Testing → Done
 
 ## Issue Flow
 
-```
+```text
 Issue Created
     ↓
 [To Do] — Triaged with priority + labels
@@ -49,6 +49,7 @@ Issue Created
 ## Multi-Repo Projects
 
 When a project spans multiple repos (e.g., API + WebApp):
+
 - Each repo has its own board
 - Cross-repo work: create the issue in the primary repo, link to the other
 - Sync status manually — if API is done but WebApp isn't, the API issue can be Done while the WebApp issue stays In Progress

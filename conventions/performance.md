@@ -147,7 +147,7 @@ const course = await cached(`course:${id}`, 300, () => db.course.findUnique({ wh
 
 ### Cache Key Convention
 
-```
+```text
 <entity>:<id>                    → course:abc-123
 <entity>:list:<tenant>:<hash>    → course:list:tenant-1:page1-size20
 <entity>:count:<tenant>          → course:count:tenant-1

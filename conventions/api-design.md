@@ -2,7 +2,7 @@
 
 ## URL Structure
 
-```
+```text
 https://api.example.com/api/{resource}
 ```
 
@@ -56,7 +56,7 @@ See [api-error-format.md](api-error-format.md) for the standard error format.
 
 **Offset-based** (default for most use cases):
 
-```
+```text
 GET /api/courses?page=2&pageSize=20
 ```
 
@@ -69,11 +69,12 @@ Response includes pagination metadata in the response body (see above).
 
 **Cursor-based** (for real-time feeds, infinite scroll):
 
-```
+```text
 GET /api/notifications?cursor=eyJpZCI6MTIzfQ&limit=20
 ```
 
 Use cursor-based when:
+
 - Data changes frequently (new items inserted)
 - You need consistent pagination without duplicates
 - Large datasets where OFFSET is slow
@@ -82,7 +83,7 @@ Use cursor-based when:
 
 Use query parameters:
 
-```
+```text
 GET /api/courses?status=active&departmentId=5&search=psychology
 ```
 
@@ -93,7 +94,7 @@ GET /api/courses?status=active&departmentId=5&search=psychology
 
 ## Sorting
 
-```
+```text
 GET /api/courses?sortBy=createdAt&sortOrder=desc
 ```
 
@@ -108,12 +109,13 @@ For multiple sort fields: `?sortBy=status,-createdAt` (prefix `-` for descending
 
 Prefer **URL path versioning** when breaking changes are needed:
 
-```
+```text
 /api/v1/courses
 /api/v2/courses
 ```
 
 Rules:
+
 - Don't version from day one — start with `/api/courses`
 - Add versioning only when you make a breaking change
 - Support the previous version for a deprecation period
@@ -123,7 +125,7 @@ Rules:
 
 Return these headers on every response:
 
-```
+```text
 X-RateLimit-Limit: 100
 X-RateLimit-Remaining: 95
 X-RateLimit-Reset: 1620000000
@@ -135,14 +137,14 @@ When exceeded, return `429 Too Many Requests` with `Retry-After` header.
 
 ### Bulk Operations
 
-```
+```text
 POST /api/courses/bulk-delete
 Body: { "ids": ["abc", "def", "ghi"] }
 ```
 
 ### Actions (non-CRUD operations)
 
-```
+```text
 POST /api/courses/{id}/publish
 POST /api/courses/{id}/archive
 POST /api/users/{id}/deactivate
@@ -150,7 +152,7 @@ POST /api/users/{id}/deactivate
 
 ### Health Check
 
-```
+```text
 GET /api/health          → 200 { "status": "healthy" }
 GET /api/health/ready    → 200 or 503 (checks dependencies)
 ```

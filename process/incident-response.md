@@ -29,6 +29,7 @@
 **Stop the bleeding before finding root cause.**
 
 Options (in order of preference):
+
 1. **Rollback**: Deploy the previous known-good version
 2. **Feature flag**: Disable the broken feature
 3. **Hotfix**: If the fix is obvious and small (< 10 lines)
@@ -47,6 +48,7 @@ git revert <merge-commit-hash>
 ### Step 4: Fix Root Cause
 
 After the immediate impact is mitigated:
+
 1. Create a GitHub issue labeled `bug` + `P0-critical` or `P1-high`
 2. Branch: `hotfix/<description>`
 3. Fix, test, PR, review, merge

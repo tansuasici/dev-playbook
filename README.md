@@ -42,7 +42,7 @@ Bookmark this repo. Before starting a new project, run through `checklists/new-p
 
 ## Structure
 
-```
+```text
 dev-playbook/
 ├── process/                 ← How work flows
 │   ├── branching.md             Branch strategy and naming

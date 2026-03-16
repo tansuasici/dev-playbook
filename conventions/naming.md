@@ -50,7 +50,7 @@
 
 ## API Endpoints
 
-```
+```text
 GET    /api/courses              ← List
 GET    /api/courses/{id}         ← Get by ID
 POST   /api/courses              ← Create

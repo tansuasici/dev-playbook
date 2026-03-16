@@ -14,6 +14,7 @@ Run through this when starting any new project.
 
 - [ ] Create GitHub Project board (Kanban: To Do → In Progress → Testing → Done)
 - [ ] Add labels to repo (see [labels.yml](../labels.yml)):
+
   ```bash
   # Priority labels
   gh label create "P0-critical" --color "B60205" --description "Critical priority" --repo <repo>
@@ -21,6 +22,7 @@ Run through this when starting any new project.
   gh label create "P2-medium" --color "FBCA04" --description "Medium priority" --repo <repo>
   gh label create "P3-low" --color "0E8A16" --description "Low priority" --repo <repo>
   ```
+
 - [ ] Add PR template: `.github/PULL_REQUEST_TEMPLATE.md` (from [templates/pull-request.md](../templates/pull-request.md))
 - [ ] Add issue templates: `.github/ISSUE_TEMPLATE/` (from [templates/](../templates/))
 - [ ] Enable branch protection on `main` (if on paid plan):

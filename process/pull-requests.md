@@ -7,6 +7,7 @@
 ## PR Creation
 
 ### Title
+
 - Keep under 70 characters
 - Use imperative mood: "Add user auth" not "Added user auth"
 - Prefix with type if helpful: `feat: Add user auth`, `fix: Resolve login loop`
@@ -34,6 +35,7 @@ Every PR must have:
 ### Linking Issues
 
 Always reference the issue:
+
 - `Closes #42` — auto-closes the issue on merge
 - `Fixes #42` — same behavior
 - `Related to #42` — links without auto-closing (use for partial work)
@@ -87,16 +89,21 @@ When the PR is declined, the approach itself is wrong — not just the details.
 1. **Document why**: Add a comment on the declined PR explaining the reason
 2. **Close the PR** (don't delete — keep it as history)
 3. **Delete the old branch** (remote and local):
+
    ```bash
    git checkout main && git pull
    git branch -D feat/old-approach
    git push origin --delete feat/old-approach
    ```
+
 4. **Create a new branch** with the revised approach:
+
    ```bash
    git checkout -b feat/new-approach
    ```
+
 5. **Open a new PR** and reference the declined one:
+
    ```markdown
    ## Summary
    - Replaces #<declined-PR-number> with a different approach
@@ -106,6 +113,7 @@ When the PR is declined, the approach itself is wrong — not just the details.
    - Closes #<original-issue>
    - Supersedes #<declined-PR-number>
    ```
+
 6. The **original issue stays open** — only the PR was declined, not the work itself
 
 ### Key Point
@@ -119,6 +127,7 @@ When the PR is declined, the approach itself is wrong — not just the details.
 - **Never rebase and merge** on shared branches (rewrites history)
 
 After merge:
+
 - Delete the feature branch (remote and local)
 - Verify the issue was auto-closed
 - Check that the board status updated
@@ -126,6 +135,7 @@ After merge:
 ## Draft PRs
 
 Use Draft PRs when:
+
 - Work is in progress but you want CI feedback
 - You want to show the approach before finishing
 - You need to save work across machines

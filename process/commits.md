@@ -2,7 +2,7 @@
 
 ## Format: Conventional Commits
 
-```
+```text
 <type>: <description>
 
 [optional body]
@@ -38,7 +38,7 @@
 
 Use `!` after the type or add `BREAKING CHANGE:` in the footer:
 
-```
+```text
 feat!: change authentication to OAuth2
 
 BREAKING CHANGE: JWT token format has changed. All existing tokens will be invalidated.
@@ -48,7 +48,7 @@ BREAKING CHANGE: JWT token format has changed. All existing tokens will be inval
 
 Use the body to explain **why**, not what. The diff shows what changed.
 
-```
+```text
 fix: prevent duplicate enrollment for same course
 
 Students could enroll multiple times by rapidly clicking the enroll button.
@@ -59,7 +59,7 @@ Added a unique constraint on (StudentId, CourseId) and a client-side debounce.
 
 When working with AI assistants:
 
-```
+```text
 feat: implement course analytics dashboard
 
 Co-Authored-By: Claude <noreply@anthropic.com>
@@ -67,7 +67,7 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 
 ## What NOT to Do
 
-```
+```text
 # Too vague
 fix: fix bug
 feat: update code

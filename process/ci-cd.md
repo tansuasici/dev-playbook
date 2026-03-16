@@ -7,12 +7,14 @@
 ## CI Pipeline Requirements
 
 Every project must have a CI pipeline that runs on:
+
 - Push to `main`
 - Pull requests targeting `main`
 
 ### Minimum CI Steps by Stack
 
 #### .NET Projects
+
 ```yaml
 steps:
   - Checkout
@@ -25,6 +27,7 @@ steps:
 ```
 
 #### Next.js Projects
+
 ```yaml
 steps:
   - Checkout
@@ -37,6 +40,7 @@ steps:
 ```
 
 #### Python Projects
+
 ```yaml
 steps:
   - Checkout
@@ -67,16 +71,19 @@ concurrency:
 ## CD Pipeline
 
 ### Staging
+
 - Auto-deploy on merge to `main`
 - Docker build → push to registry → deploy to staging server
 - Run smoke tests after deploy
 
 ### Production
+
 - Deploy on version tags (`v*`)
 - Same image that passed staging
 - Rollback plan documented
 
 ### Environment Variables
+
 - Never hardcode secrets in CI files
 - Use GitHub Secrets for sensitive values
 - Use GitHub Variables for non-sensitive config
@@ -98,6 +105,7 @@ jobs:
 ```
 
 Benefits:
+
 - Update CI once, all repos get the change
 - Consistent standards across projects
 - Less copy-paste drift between repos

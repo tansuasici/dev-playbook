@@ -3,12 +3,14 @@
 ## Authentication
 
 ### JWT Strategy
+
 - **Access token**: Short-lived (15 minutes)
 - **Refresh token**: Long-lived (7 days), stored in HttpOnly cookie
 - **Never** store tokens in localStorage (XSS vulnerable)
 - Include `tenantId` and `role` in token claims
 
 ### Password Policy
+
 - Minimum 8 characters
 - At least one uppercase, one lowercase, one digit
 - Use bcrypt or Argon2 for hashing (never MD5, never SHA without salt)
@@ -24,6 +26,7 @@
 ## Input Validation
 
 ### API Layer
+
 - Validate ALL input at the boundary (controllers/route handlers)
 - Use schema validation (FluentValidation, Zod, Pydantic)
 - Reject invalid input early — don't let it reach business logic
@@ -42,7 +45,8 @@
 ## API Security
 
 ### Headers
-```
+
+```text
 X-Content-Type-Options: nosniff
 X-Frame-Options: DENY
 Strict-Transport-Security: max-age=31536000; includeSubDomains
@@ -51,11 +55,13 @@ X-XSS-Protection: 0  (rely on CSP instead)
 ```
 
 ### CORS
+
 - Whitelist only known origins (tenant subdomains)
 - Never use `Access-Control-Allow-Origin: *` in production
 - Be specific about allowed methods and headers
 
 ### Rate Limiting
+
 - Per-tenant and per-user limits
 - Stricter limits on auth endpoints
 - Return `429 Too Many Requests` with `Retry-After` header
@@ -68,7 +74,8 @@ X-XSS-Protection: 0  (rely on CSP instead)
 - Rotate secrets regularly, especially after team member departures
 
 ### .gitignore Must Include
-```
+
+```text
 .env
 .env.local
 .env.production

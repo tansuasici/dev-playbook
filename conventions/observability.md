@@ -18,7 +18,7 @@ Every service must expose health endpoints.
 
 ### Endpoints
 
-```
+```text
 GET /api/health          → 200 { "status": "healthy" }
 GET /api/health/ready    → 200 or 503 (checks dependencies)
 GET /api/health/live     → 200 (process is running, used by k8s liveness probe)
@@ -72,6 +72,7 @@ app.get('/api/health/ready', async (req, res) => {
 ### RED Method (for services)
 
 Every service should track:
+
 - **R**ate — requests per second
 - **E**rrors — failed requests per second
 - **D**uration — time per request (p50, p95, p99)
@@ -79,13 +80,14 @@ Every service should track:
 ### USE Method (for resources)
 
 Every resource (CPU, memory, disk, connections) should track:
+
 - **U**tilization — percentage in use
 - **S**aturation — queue depth / backlog
 - **E**rrors — error count
 
 ### Naming Convention
 
-```
+```text
 <namespace>_<name>_<unit>
 
 # Examples

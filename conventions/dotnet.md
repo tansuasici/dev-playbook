@@ -2,7 +2,7 @@
 
 ## Architecture: Clean Architecture
 
-```
+```text
 Solution/
 ├── src/
 │   ├── Domain/           ← Entities, value objects, enums, domain events
@@ -49,7 +49,7 @@ Solution/
 
 ## CQRS Structure
 
-```
+```text
 Application/
 ├── Features/
 │   └── Courses/

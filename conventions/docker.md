@@ -29,14 +29,17 @@ ENTRYPOINT ["dotnet", "Api.dll"]
 1. **Pin base image versions** — `node:22-alpine`, not `node:latest`
 2. **Use alpine variants** when possible — smaller image, smaller attack surface
 3. **Don't run as root** — Add a non-root user:
+
    ```dockerfile
    RUN adduser --disabled-password --gecos "" appuser
    USER appuser
    ```
+
 4. **Order layers by change frequency** — Dependencies first (cached), source code last
 5. **Use .dockerignore** — Exclude `node_modules/`, `bin/`, `obj/`, `.git/`, `.env`
 6. **One process per container** — Don't run web server + background worker in the same container
 7. **Health checks in Dockerfile**:
+
    ```dockerfile
    HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
      CMD curl -f http://localhost:8080/health || exit 1
@@ -109,7 +112,7 @@ REDIS_PORT=6379
 
 ## Image Naming
 
-```
+```text
 ghcr.io/<org>/<service>:<tag>
 ```
 
@@ -121,7 +124,7 @@ ghcr.io/<org>/<service>:<tag>
 
 ## .dockerignore
 
-```
+```text
 .git
 .github
 node_modules

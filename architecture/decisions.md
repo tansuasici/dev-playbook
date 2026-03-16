@@ -25,6 +25,7 @@ When making a significant technical decision, document it here. Future-you (and 
 **Context**: Need a maintainable, testable backend structure that separates concerns.
 **Decision**: Use Clean Architecture with 4 layers: Domain → Application → Infrastructure → Api.
 **Consequences**:
+
 - (+) Domain logic is framework-independent and highly testable
 - (+) Infrastructure can be swapped (e.g., change ORM, change DB)
 - (-) More files and indirection for simple CRUD operations
@@ -37,6 +38,7 @@ When making a significant technical decision, document it here. Future-you (and 
 **Context**: Need clear separation between read and write operations for maintainability.
 **Decision**: Use MediatR for command/query dispatch. One handler per use case.
 **Consequences**:
+
 - (+) Each use case is isolated and testable
 - (+) Easy to add cross-cutting concerns (validation, logging) via behaviors
 - (-) Boilerplate: Command + Handler + Validator per operation
@@ -49,6 +51,7 @@ When making a significant technical decision, document it here. Future-you (and 
 **Context**: Need object mapping between DTOs and entities.
 **Decision**: Use Mapster instead of AutoMapper.
 **Consequences**:
+
 - (+) No commercial license issues (AutoMapper changed to commercial)
 - (+) Better performance (compile-time mapping)
 - (+) Similar API, easy to learn

@@ -3,6 +3,7 @@
 ## Why Review?
 
 Even solo developers benefit from review. It forces you to:
+
 - Re-read your own code with fresh eyes
 - Catch bugs before they reach main
 - Maintain consistent quality standards
@@ -11,12 +12,14 @@ Even solo developers benefit from review. It forces you to:
 ## What to Look For
 
 ### Correctness
+
 - Does the code do what the PR says it does?
 - Are edge cases handled? (null, empty, zero, negative, max values)
 - Is the error handling appropriate? (not too much, not too little)
 - Does it work for all tenants / roles / locales?
 
 ### Security
+
 - User input validated at the boundary?
 - No SQL injection, XSS, or path traversal risks?
 - Authentication / authorization checks in place?
@@ -24,24 +27,28 @@ Even solo developers benefit from review. It forces you to:
 - Multi-tenant isolation preserved? (TenantId filtering)
 
 ### Design
+
 - Is this the simplest solution that works?
 - Does it follow the project's architecture? (Clean Architecture layers, CQRS, etc.)
 - Is the code in the right place? (not business logic in controllers, not DB calls in domain)
 - Any unnecessary abstraction or over-engineering?
 
 ### Readability
+
 - Can you understand the code without the PR description?
 - Are names descriptive? (variables, functions, classes)
 - Is the code self-documenting? (comments only where "why" isn't obvious)
 - Consistent with the project's conventions?
 
 ### Performance (only when relevant)
+
 - N+1 query problems?
 - Missing database indexes for new queries?
 - Unnecessary memory allocations in hot paths?
 - Missing pagination on list endpoints?
 
 ### Testing
+
 - Are there tests for the new behavior?
 - Do the tests actually verify the right thing? (not just "test exists")
 - Are edge cases tested?
@@ -63,7 +70,7 @@ Use prefixes to clarify intent:
 
 ### Examples
 
-```
+```text
 blocker: This endpoint has no authorization check. Any authenticated
 user can delete any course regardless of role.
 

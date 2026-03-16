@@ -20,7 +20,7 @@
 
 ## Architecture
 
-```
+```text
 Controller / Route Handler
   ↓ catches validation errors → 400
   ↓
@@ -189,7 +189,7 @@ async def app_exception_handler(request: Request, exc: AppException):
 
 ### Retry Strategy
 
-```
+```text
 Retry 1 → wait 1s
 Retry 2 → wait 2s
 Retry 3 → wait 4s
@@ -207,7 +207,7 @@ builder.Services.AddHttpClient("ExternalApi")
 
 When an external service is consistently failing, stop calling it temporarily:
 
-```
+```text
 Closed (normal) → Too many failures → Open (reject calls for 30s) → Half-Open (try one) → Closed
 ```
 

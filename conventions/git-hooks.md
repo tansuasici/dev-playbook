@@ -25,11 +25,13 @@ npx husky init
 ```
 
 `.husky/pre-commit`:
+
 ```bash
 npx lint-staged
 ```
 
 `package.json`:
+
 ```json
 {
   "lint-staged": {
@@ -40,16 +42,19 @@ npx lint-staged
 ```
 
 `.husky/commit-msg`:
+
 ```bash
 npx --no -- commitlint --edit "$1"
 ```
 
 Install commitlint:
+
 ```bash
 npm install --save-dev @commitlint/cli @commitlint/config-conventional
 ```
 
 `commitlint.config.js`:
+
 ```javascript
 export default { extends: ['@commitlint/config-conventional'] };
 ```
@@ -70,6 +75,7 @@ pip install pre-commit
 ```
 
 `.pre-commit-config.yaml`:
+
 ```yaml
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
