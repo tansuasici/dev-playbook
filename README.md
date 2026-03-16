@@ -32,7 +32,7 @@ Apply templates/ when creating issues and PRs.
 
 Or at the start of a session:
 
-> "Read https://github.com/tansuasici/dev-playbook first, then work on this project."
+> "Read the dev-playbook repo first, then work on this project."
 
 ### For Yourself
 
