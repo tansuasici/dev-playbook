@@ -16,7 +16,7 @@
 ## Self-Review Checklist
 
 - [ ] I've read every line of the diff
-- [ ] Follows the [style guide](CONTRIBUTING.md#style-guide)
+- [ ] Follows the [style guide](../CONTRIBUTING.md#style-guide)
 - [ ] No duplicate content with existing guides
 - [ ] Examples include .NET, TypeScript, and Python where relevant
 - [ ] Table of Contents in README updated (if adding a new guide)
