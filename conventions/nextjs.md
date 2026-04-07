@@ -35,6 +35,7 @@ src/
 2. **Colocate** — Keep related files together (component + its types + its styles)
 3. **One component per file** — Exception: small helper components used only by the parent
 4. **Export named, not default** — `export function CourseCard()` not `export default function`
+   - *Exception*: App Router route files (`page.tsx`, `layout.tsx`, `loading.tsx`, `error.tsx`, `not-found.tsx`) require default exports per Next.js convention
 
 ## State Management
 

@@ -1,8 +1,8 @@
 # Dev Playbook
 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tansuasici/dev-playbook/blob/main/LICENSE)
 [![Markdown Lint](https://github.com/tansuasici/dev-playbook/actions/workflows/lint.yml/badge.svg)](https://github.com/tansuasici/dev-playbook/actions/workflows/lint.yml)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/tansuasici/dev-playbook/blob/main/VERSION)
 
 Personal software development playbook. Defines how I build software — from branching strategy to code conventions.
 
@@ -108,7 +108,7 @@ dev-playbook/
 | Onboard to a project | [checklists/onboarding.md](checklists/onboarding.md) |
 | Create a feature branch | [process/branching.md](process/branching.md) |
 | Write a commit message | [process/commits.md](process/commits.md) |
-| Open an issue | [process/issues.md](process/issues.md) + [templates/](templates/) |
+| Open an issue | [process/issues.md](process/issues.md) + [templates/](https://github.com/tansuasici/dev-playbook/tree/main/templates) |
 | Open a PR | [process/pull-requests.md](process/pull-requests.md) |
 | Review code | [process/code-review.md](process/code-review.md) |
 | Set up CI/CD | [process/ci-cd.md](process/ci-cd.md) |
@@ -151,4 +151,4 @@ Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://github.com/tansuasici/dev-playbook/blob/main/LICENSE).

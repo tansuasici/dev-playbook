@@ -66,7 +66,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/tansuasici/dev-playbook/blob/main/LICENSE)
 ```
 
 ## API Documentation

@@ -80,7 +80,7 @@ What NOT to do, with examples.
 
 ## Code of Conduct
 
-This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you agree to uphold this code.
+This project follows the [Contributor Covenant Code of Conduct](https://github.com/tansuasici/dev-playbook/blob/main/CODE_OF_CONDUCT.md). By participating, you agree to uphold this code.
 
 ## Questions?
 

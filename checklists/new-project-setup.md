@@ -13,7 +13,7 @@ Run through this when starting any new project.
 ## GitHub Configuration
 
 - [ ] Create GitHub Project board (Kanban: To Do → In Progress → Testing → Done)
-- [ ] Add labels to repo (see [labels.yml](../labels.yml)):
+- [ ] Add labels to repo (see [labels.yml](https://github.com/tansuasici/dev-playbook/blob/main/labels.yml)):
 
   ```bash
   # Priority labels
@@ -24,7 +24,7 @@ Run through this when starting any new project.
   ```
 
 - [ ] Add PR template: `.github/PULL_REQUEST_TEMPLATE.md` (from [templates/pull-request.md](../templates/pull-request.md))
-- [ ] Add issue templates: `.github/ISSUE_TEMPLATE/` (from [templates/](../templates/))
+- [ ] Add issue templates: `.github/ISSUE_TEMPLATE/` (from [templates/](https://github.com/tansuasici/dev-playbook/tree/main/templates))
 - [ ] Enable branch protection on `main` (if on paid plan):
   - Require PR before merging
   - Require CI status checks to pass
