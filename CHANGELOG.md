@@ -4,6 +4,13 @@ All notable changes to this playbook will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.1](https://github.com/tansuasici/dev-playbook/compare/v1.1.0...v1.1.1) (2026-04-07)
+
+
+### Bug Fixes
+
+* exclude CHANGELOG.md from markdownlint CI ([97214e4](https://github.com/tansuasici/dev-playbook/commit/97214e497ffb2fc2c0bd948369f620f583b67b66))
+
 ## [1.1.0](https://github.com/tansuasici/dev-playbook/compare/v1.0.0...v1.1.0) (2026-04-07)
 
 
