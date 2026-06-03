@@ -1,4 +1,10 @@
-# Dev Playbook
+<p align="center">
+  <img src="https://devplaybook.tansuasici.com/assets/logo.png" alt="Dev Playbook" width="160">
+</p>
+
+<h1 align="center">Dev Playbook</h1>
+
+<p align="center">An opinionated engineering playbook — conventions, architecture decisions, processes, and checklists for modern software teams.</p>
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tansuasici/dev-playbook/blob/main/LICENSE)
 [![Markdown Lint](https://github.com/tansuasici/dev-playbook/actions/workflows/lint.yml/badge.svg)](https://github.com/tansuasici/dev-playbook/actions/workflows/lint.yml)
@@ -44,60 +50,60 @@ Bookmark this repo. Before starting a new project, run through `checklists/new-p
 
 ```text
 dev-playbook/
-├── process/                 ← How work flows
-│   ├── branching.md             Branch strategy and naming
-│   ├── commits.md               Conventional Commits rules
-│   ├── issues.md                Issue creation and lifecycle
-│   ├── pull-requests.md         PR process and review outcomes
-│   ├── board-workflow.md        Kanban board flow
-│   ├── ci-cd.md                 CI/CD pipeline standards
-│   ├── code-review.md           How to review code
-│   ├── incident-response.md     What to do when production breaks
-│   └── dependency-management.md Adding, updating, removing deps
-├── conventions/             ← How code is written
-│   ├── dotnet.md                .NET / C# standards
-│   ├── nextjs.md                Next.js / React standards
-│   ├── python.md                Python standards
-│   ├── naming.md                Naming conventions (all languages)
-│   ├── api-design.md            REST API design standards
-│   ├── api-error-format.md      Standard error response format (RFC 7807)
-│   ├── error-handling.md        Exception handling patterns
-│   ├── testing.md               Testing philosophy and practices
-│   ├── logging.md               Logging levels, structured logging
-│   ├── observability.md         Metrics, tracing, alerting, health checks
-│   ├── performance.md           Response budgets, caching, N+1 prevention
-│   ├── docker.md                Dockerfile and Compose best practices
-│   ├── git-hooks.md             Pre-commit hooks setup
-│   ├── environment-management.md  Environment config, feature flags, secrets
-│   ├── documentation.md         README template, API docs, inline comments
-│   ├── accessibility.md         WCAG 2.1 AA, keyboard nav, screen readers
-│   └── i18n.md                  Internationalization and localization
-├── architecture/            ← How systems are designed
-│   ├── decisions.md             Architecture Decision Records (ADR)
-│   ├── multi-tenancy.md         Multi-tenancy with RLS
-│   ├── security.md              Security standards and OWASP
-│   └── database.md              Schema design, migrations, indexing
-├── templates/               ← Copy-paste templates
-│   ├── issue-feature.md         Feature request template
-│   ├── issue-bug.md             Bug report template
-│   ├── pull-request.md          PR template
-│   └── claude-md-starter.md     CLAUDE.md starter for new projects
-├── checklists/              ← Step-by-step checklists
-│   ├── new-project-setup.md     New project bootstrap
-│   ├── pre-merge.md             Pre-merge review
-│   ├── release.md               Release process
-│   ├── security-audit.md        Periodic security audit
-│   └── onboarding.md            New developer onboarding
-├── .github/                 ← GitHub integration
-│   ├── ISSUE_TEMPLATE/          Native issue templates (bug, feature)
-│   ├── PULL_REQUEST_TEMPLATE.md Native PR template
-│   └── workflows/lint.yml       Markdown lint + broken link check
-├── labels.yml               ← Standard GitHub label set
-├── CONTRIBUTING.md          ← How to contribute
-├── CODE_OF_CONDUCT.md       ← Community standards
-├── CHANGELOG.md             ← Version history
-├── VERSION                  ← Current version (semver)
-└── LICENSE                  ← MIT License
+  process/                     How work flows
+    branching.md               Branch strategy and naming
+    commits.md                 Conventional Commits rules
+    issues.md                  Issue creation and lifecycle
+    pull-requests.md           PR process and review outcomes
+    board-workflow.md          Kanban board flow
+    ci-cd.md                   CI/CD pipeline standards
+    code-review.md             How to review code
+    incident-response.md       What to do when production breaks
+    dependency-management.md   Adding, updating, removing deps
+  conventions/                 How code is written
+    dotnet.md                  .NET / C# standards
+    nextjs.md                  Next.js / React standards
+    python.md                  Python standards
+    naming.md                  Naming conventions (all languages)
+    api-design.md              REST API design standards
+    api-error-format.md        Standard error response format (RFC 7807)
+    error-handling.md          Exception handling patterns
+    testing.md                 Testing philosophy and practices
+    logging.md                 Logging levels, structured logging
+    observability.md           Metrics, tracing, alerting, health checks
+    performance.md             Response budgets, caching, N+1 prevention
+    docker.md                  Dockerfile and Compose best practices
+    git-hooks.md               Pre-commit hooks setup
+    environment-management.md  Environment config, feature flags, secrets
+    documentation.md           README template, API docs, inline comments
+    accessibility.md           WCAG 2.1 AA, keyboard nav, screen readers
+    i18n.md                    Internationalization and localization
+  architecture/                How systems are designed
+    decisions.md               Architecture Decision Records (ADR)
+    multi-tenancy.md           Multi-tenancy with RLS
+    security.md                Security standards and OWASP
+    database.md                Schema design, migrations, indexing
+  templates/                   Copy-paste templates
+    issue-feature.md           Feature request template
+    issue-bug.md               Bug report template
+    pull-request.md            PR template
+    claude-md-starter.md       CLAUDE.md starter for new projects
+  checklists/                  Step-by-step checklists
+    new-project-setup.md       New project bootstrap
+    pre-merge.md               Pre-merge review
+    release.md                 Release process
+    security-audit.md          Periodic security audit
+    onboarding.md              New developer onboarding
+  .github/                     GitHub integration
+    ISSUE_TEMPLATE/            Native issue templates (bug, feature)
+    PULL_REQUEST_TEMPLATE.md   Native PR template
+    workflows/lint.yml         Markdown lint + broken link check
+  labels.yml                   Standard GitHub label set
+  CONTRIBUTING.md              How to contribute
+  CODE_OF_CONDUCT.md           Community standards
+  CHANGELOG.md                 Version history
+  VERSION                      Current version (semver)
+  LICENSE                      MIT License
 ```
 
 ## Quick Reference
